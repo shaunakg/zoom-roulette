@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Zoom Roulette - find and submit random meetings</title>
+    <link rel="stylesheet" href="meeting-stylesheet.css">
+
+</head>
+
+<body>
+
+<div class="center-fields">
+    
+    <h2 id="title"></h2>
+    <p id="desc"></p>
+    <p id="expdate"></p>
+
+    <button class="good" id="url">Go to meeting</button><br>
+    <button class="bad" onclick="window.location.href = '../'">Go back</button>
+
+</div>
+
+<center><a href="https://github.com/shaunakg/zoom-roulette" target="_blank" rel="noopener"><span class="bottom-bar">Made with ❤️ by @shaunakg under the MIT License</span></a></center>
+
+</body>
+
+<script>
+
+const urlParams = new URLSearchParams(window.location.search);
+const titlefield = document.getElementById('title');
+const descfield = document.getElementById('desc');
+const expdatefield = document.getElementById('expdate');
+const gotobutton = document.getElementById('url');
+
+titlefield.innerText = urlParams.get('title');
+descfield.innerText = urlParams.get('description');
+expdatefield.innerText = urlParams.get('expdate');
+
+gotobutton.onclick = function () {
+    window.location.href = "https://zoom.us/j/" + urlParams.get('id');
+};
+
+</script>

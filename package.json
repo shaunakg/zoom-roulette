@@ -24,5 +24,9 @@
   "bugs": {
     "url": "https://github.com/shaunakg/zoom-roulette/issues"
   },
-  "homepage": "https://github.com/shaunakg/zoom-roulette#readme"
+  "homepage": "https://github.com/shaunakg/zoom-roulette#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nosql": "^6.1.0"
+  }
 }

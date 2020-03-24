@@ -1,0 +1,76 @@
+
+body {
+    font-family: sans-serif;
+    background: rgb(243, 243, 243);
+    margin: 0;
+}
+
+.input-form {
+    position: absolute;
+    top: 20%;
+    left: 43%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+.input-form input, .input-form button {
+    padding: 15px;
+    margin: 10px;
+    width: 100%;
+    border-radius: 10px;
+    background: white;
+    box-shadow: none;
+    border: 2px solid lightblue;
+}
+
+.input-form input:focus, .input-form button:focus {
+    border: 2px solid red;
+    outline: none;
+}
+
+.input-form input[type=submit], .input-form button {
+    padding: 15px;
+    width: calc(111% + 4px);
+    background: lightblue;
+}
+
+.input-form button {
+    background-color: orange;
+    border: 2px solid orange;
+}
+
+.msgdisplay {
+    position: fixed;
+    padding: 20px;
+    color: white;
+    user-select: none;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+.msgdisplay.bad {
+    background: red;
+}
+
+.msgdisplay.good {
+    background-color: lightgreen;
+    color: white;
+}
+
+.msggoaway {
+    cursor: pointer;
+}
+
+/* Bottom credit bar */
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    width: 98%;
+    left: 0;
+    right: 0;
+    color: white;
+    background-color: black;
+    padding: 1%;
+    margin: 0;
+}

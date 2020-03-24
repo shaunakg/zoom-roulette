@@ -1,0 +1,58 @@
+
+body {
+    font-family: sans-serif;
+    background: rgb(243, 243, 243);
+    margin: 0;
+}
+
+.center-fields {
+    position: absolute;
+    top: 20%;
+    left: 43%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+.center-fields button {
+    padding: 15px;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 10px;
+    background: white;
+    box-shadow: none;
+    border: 2px solid lightblue;
+}
+
+.center-fields button:focus {
+    border: 2px solid red;
+    outline: none;
+}
+
+.center-fields input[type=submit], .center-fields button {
+    padding: 15px;
+    width: calc(111% + 4px);
+    background: lightblue;
+}
+
+.center-fields button.bad {
+    background-color: orange;
+    border: 2px solid orange;
+}
+
+.center-fields button.good {
+    background-color: lightblue;
+    border: 2px solid lightblue;
+}
+
+/* Bottom credit bar */
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    width: 98%;
+    left: 0;
+    right: 0;
+    color: white;
+    background-color: black;
+    padding: 1%;
+    margin: 0;
+}

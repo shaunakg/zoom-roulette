@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Zoom Roulette - find and submit random meetings</title>
+    <link rel="stylesheet" href="stylesheet.css">
+
+</head>
+
+<body>
+
+<form action="/api/submit/zoom" method="GET" class="input-form">
+
+    <input type="text" name="id" id="id_input_field" placeholder="Zoom Meeting ID" autocomplete="off" minlength="9" maxlength="9" required><br>
+
+    <input type="datetime-local" name="expdate" id="expdate_input_field" placeholder="Meeting expiry date" autocomplete="off" required><br>
+
+    <input type="text" name="title" id="title_input_field" placeholder="Meeting title" autocomplete="off" required><br>
+
+    <input type="text" name="description" id="desc_input_field" placeholder="meeting description" autocomplete="off" required><br>
+
+    <input type="submit" value="Submit meeting information"><br>
+
+    <button class="submit-btn" onclick="window.location.href = '/api/deliver/zoom'">Get a random meeting</button><br>
+
+</form>
+
+<center><a href="https://github.com/shaunakg/zoom-roulette" target="_blank" rel="noopener"><span class="bottom-bar">Made with ❤️ by @shaunakg under the MIT License</span></a></center>
+
+</body>
+
+<script>
+
+
+
+</script>
