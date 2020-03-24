@@ -5,13 +5,15 @@ var http = require('http').createServer(app);
 const querystring = require('querystring');
 var nosql = require('nosql');
 
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 8080;
 var db = [{
     id: '123456789',
     expdate: '2025-03-24T21:37',
     title: 'Test meeting',
     description: 'This is a test meeting. The ID is not valid.'
 }];
+
+app.use(express.static('static'));
 
 app.get('/', function (req, res) {
     res.sendFile(__dirname + '/static/index.html');
@@ -72,8 +74,6 @@ app.get('/api/deliver/:cms', function (req, res) {
     }
 
 });
-
-app.use(express.static('static'));
 
 // Listen for connections
 http.listen(PORT, function(){
