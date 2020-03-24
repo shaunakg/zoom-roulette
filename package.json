@@ -1,0 +1,28 @@
+{
+  "name": "zoom-roulette",
+  "version": "1.0.0",
+  "description": "NodeJS application where users can submit Zoom meeting links for other people to discover. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaunakg/zoom-roulette.git"
+  },
+  "keywords": [
+    "fun",
+    "npm",
+    "node",
+    "rng",
+    "covid",
+    "coronavirus",
+    "work-from-home"
+  ],
+  "author": "@shaunakg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shaunakg/zoom-roulette/issues"
+  },
+  "homepage": "https://github.com/shaunakg/zoom-roulette#readme"
+}
