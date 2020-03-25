@@ -95,7 +95,7 @@ body {
 
     .input-form {
         position: unset;
-        width: 100%;
+        width: 91%;
         max-width: 93%;
         margin-top: unset;
         margin-left: unset;
@@ -109,12 +109,12 @@ body {
         display: none;
     }
 
-    .input-form input, .input-form input[type=submit], .input-form button {
-        width: 100%;
-    }
+    /* .input-form input, .input-form input[type=submit], .input-form button {
+        width: 91%;
+    } */
 
     .input-form input[type=submit], .input-form button {
-        width: 104%;
+        max-width: 105%;
     }
 
 }
