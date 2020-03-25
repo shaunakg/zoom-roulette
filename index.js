@@ -48,9 +48,7 @@ app.get('/api/server/current_meetings', function (req, res) {
 
 app.get('/api/submit/:cms', function (req, res) {
 
-    console.log(req.query);
-
-    if (req.params.cms == "zoom") {
+    if (req.params.cms == "zoom" && req.query.id && req.query.expdate && req.query.title && req.query.description) {
         const mid = req.query.id;
         const mexp = req.query.expdate;
         const mtitle = req.query.title;
