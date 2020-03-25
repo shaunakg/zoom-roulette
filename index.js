@@ -38,7 +38,8 @@ app.get('/meeting/', function (req, res) {
 app.get('/api/server/current_meetings', function (req, res) {
 
     for (i = 0; i < Object.keys(db).length; i++) {
-        res.write("\n---\n<b>" + db[i].title + "</b>\nID: " + db[i].id + "\nDescription: " + db[i].description + "\nExpiry date: " + db[i].expDate);
+        res.write("SERVER UPTIME " + process.uptime() + " SECONDS\n");
+        res.write("---\n<b>" + db[i].title + "</b>\nID: " + db[i].id + "\nDescription: " + db[i].description + "\nExpiry date: " + db[i].expDate);
     }
 
     res.end();
