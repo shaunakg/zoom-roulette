@@ -39,7 +39,7 @@ app.get('/api/server/current_meetings', function (req, res) {
 
     for (i = 0; i < Object.keys(db).length; i++) {
         res.write("SERVER UPTIME " + process.uptime() + " SECONDS\n");
-        res.write("---\n" + db[i].title.toUpperCase() + "\nID: " + db[i].id + "\nDescription: " + db[i].description + "\nExpiry date: " + db[i].expDate);
+        res.write("---\n" + db[i].title.toUpperCase() + "\nID: " + db[i].id + "\nDescription: " + db[i].description + "\nExpiry date: " + db[i].expdate);
     }
 
     res.end();
