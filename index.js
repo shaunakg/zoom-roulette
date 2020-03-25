@@ -35,22 +35,34 @@ app.get('/meeting/', function (req, res) {
     res.sendFile(__dirname + '/static/meeting.html');
 });
 
+app.get('/api/server/current_meetings', function (req, res) {
+
+    for (i = 0; i < Object.keys(db).length; i++) {
+        res.write("\n---\n<b>" + db[i].title + "</b>\nID: " + db[i].id + "\nDescription: " + db[i].description + "\nExpiry date: " + db[i].expDate);
+    }
+
+    res.end();
+
+})
+
 app.get('/api/submit/:cms', function (req, res) {
 
     console.log(req.query);
 
     if (req.params.cms == "zoom") {
-        const id = req.query.id;
-        const expDate = req.query.expdate;
-        const title = req.query.meetingTitle;
-        const description = req.query.desc;
+        const mid = req.query.id;
+        const mexp = req.query.expdate;
+        const mtitle = req.query.title;
+        const mdesc = req.query.description;
         db.push({
-            id: id,
-            expDate: expDate,
-            title: title,
-            description: description
+            id: mid,
+            expDate: mexp,
+            title: mtitle,
+            description: mdesc
         });
     }
+
+    console.log(db.slice(-1)[0]);
 
     res.redirect("../../../?status=ok");
 
@@ -68,7 +80,7 @@ app.get('/api/deliver/:cms', function (req, res) {
         }
 
         res.statusCode = 303;
-        res.set("Location", "../../../meeting/?" + querystring.stringify(returnedMeeting));
+        res.redirect("../../../meeting/?" + querystring.stringify(returnedMeeting));
         res.end();
 
     }

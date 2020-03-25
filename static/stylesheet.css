@@ -3,14 +3,17 @@ body {
     font-family: sans-serif;
     background: rgb(243, 243, 243);
     margin: 0;
+    overflow-x: hidden;
 }
 
 .input-form {
     position: absolute;
     top: 20%;
-    left: 43%;
-    margin-top: -50px;
-    margin-left: -50px;
+    right: 40%;
+    left: 40%;
+    max-width: 20%;
+    margin-top: -3%;
+    margin-left: -2%;
 }
 
 .input-form input, .input-form button {
@@ -21,6 +24,15 @@ body {
     background: white;
     box-shadow: none;
     border: 2px solid lightblue;
+}
+
+.input-form label {
+    margin: 10px;
+    margin-bottom: 0px;
+    width: 100%;
+    font-size: 12px;
+    vertical-align: bottom;
+    user-select: none;
 }
 
 .input-form input:focus, .input-form button:focus {
@@ -73,4 +85,36 @@ body {
     background-color: black;
     padding: 1%;
     margin: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .input-form {
+        position: unset;
+        width: 100%;
+        max-width: 93%;
+        margin-top: unset;
+        margin-left: unset;
+
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .bottom-bar {
+        display: none;
+    }
+
+    .input-form input, .input-form input[type=submit], .input-form button {
+        width: 100%;
+    }
+
+    .input-form input[type=submit], .input-form button {
+        width: 104%;
+    }
+
 }

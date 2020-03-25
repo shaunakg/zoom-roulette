@@ -3,24 +3,30 @@
 <head>
 
     <title>Zoom Roulette - find and submit random meetings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
 
 </head>
 
 <body>
 
+<center><h2>Zoom Roulette</h2></center>
+
 <form action="/api/submit/zoom" method="GET" class="input-form">
 
-    <input type="text" name="id" id="id_input_field" placeholder="Zoom Meeting ID" autocomplete="off" minlength="9" maxlength="9" required><br>
+    <label for="id_input_field">Zoom Meeting ID</label><br>
+    <input type="number" name="id" id="id_input_field" placeholder="123456789" autocomplete="off" min="100000000" max="999999999" required><br>
 
-    <input type="datetime-local" name="expdate" id="expdate_input_field" placeholder="Meeting expiry date" autocomplete="off" required><br>
+    <label for="expdate_input_field">Meeting end date/time</label><br>
+    <input type="datetime-local" name="expdate" id="expdate_input_field" autocomplete="off" required><br>
 
-    <input type="text" name="title" id="title_input_field" placeholder="Meeting title" autocomplete="off" required><br>
+    <label for="title_input_field">Meeting title</label><br>
+    <input type="text" name="title" id="title_input_field" placeholder="Illuminati Inc. Shareholders' Meeting" autocomplete="off" required><br>
 
-    <input type="text" name="description" id="desc_input_field" placeholder="meeting description" autocomplete="off" required><br>
+    <label for="desc_input_field">Meeting description</label>
+    <input type="text" name="description" id="desc_input_field" placeholder="Discuss the acquisition of new lizard bodies" autocomplete="off" required><br>
 
     <input type="submit" value="Submit meeting information"><br>
-
     <button class="submit-btn" onclick="window.location.href = '/api/deliver/zoom'">Get a random meeting</button><br>
 
 </form>
