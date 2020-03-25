@@ -109,9 +109,9 @@ body {
         display: none;
     }
 
-    /* .input-form input, .input-form input[type=submit], .input-form button {
-        width: 91%;
-    } */
+    .input-form input {
+        max-width: 95%;
+    }
 
     .input-form input[type=submit], .input-form button {
         max-width: 105%;
